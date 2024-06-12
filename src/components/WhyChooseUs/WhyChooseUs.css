@@ -1,0 +1,214 @@
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2022 codewithsadee
+ */
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  --green-blue-crayola: hsl(202, 75%, 47%);
+  --prussian-blue: hsl(202, 72%, 15%);
+  --dark-orange: hsl(32, 100%, 50%);
+  --light-gray: hsl(0, 0%, 80%);
+  --black_60: hsla(0, 0%, 0%, 0.6);
+  --white: hsl(0, 0%, 100%);
+  --onyx: hsl(0, 0%, 24%);
+  --ff-oswald: 'Oswald', sans-serif;
+  --ff-rubik: 'Rubik', sans-serif;
+  --fs-4: 3rem;
+  --fs-6: 2rem;
+  --fs-7: 1.8rem;
+  --fs-8: 1.5rem;
+  --fs-9: 1.4rem;
+  --fw-600: 600;
+  --section-padding: 50px;
+  --transition: 0.25s ease;
+}
+
+/*-----------------------------------*\
+#RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+img,
+button,
+ion-icon {
+  display: block;
+}
+
+img {
+  height: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+html {
+  font-family: var(--ff-rubik);
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--onyx);
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+/*-----------------------------------*\
+#REUSED STYLE
+\*-----------------------------------*/
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.h2 {
+  color: var(--prussian-blue);
+  font-family: var(--ff-oswald);
+  font-size: var(--fs-4);
+  line-height: 1.2;
+  font-weight: var(--fw-600);
+}
+
+.section-subtitle {
+  color: var(--dark-orange);
+  text-transform: uppercase;
+  font-size: var(--fs-6);
+  font-family: var(--ff-oswald);
+  font-weight: var(--fw-600);
+  letter-spacing: 3px;
+  margin-block-end: 10px;
+}
+
+.section-text {
+  line-height: 1.4;
+}
+
+.btn {
+  position: relative;
+  color: var(--white);
+  background-color: var(--dark-orange);
+  max-width: max-content;
+  font-size: var(--fs-9);
+  letter-spacing: 1px;
+  padding-block: 10px;
+  padding-inline: 15px 50px;
+  transition: var(--transition);
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  transition: var(--transition);
+}
+
+.btn::before {
+  top: 50%;
+  right: 15px;
+  width: 25px;
+  height: 1px;
+  background-color: var(--white);
+}
+
+.btn::after {
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  width: 20px;
+  border: 2px solid var(--dark-orange);
+  z-index: -1;
+}
+
+.btn:is(:hover, :focus)::before {
+  width: 33px;
+}
+
+.btn:is(:hover, :focus)::after {
+  width: 40px;
+}
+
+.img-holder {
+  background-color: var(--light-gray);
+  aspect-ratio: var(--width) / var(--height);
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-banner {
+  position: relative;
+  box-shadow: 2px 0 50px hsla(0, 0%, 0%, 0.2);
+  max-width: 300px;
+  margin-block-end: 60px;
+}
+
+.about .abs-img-1 {
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+  animation: move 2s ease-in-out infinite alternate;
+}
+
+.about :is(.section-title, .section-text) {
+  margin-block-end: 20px;
+}
+
+.about-list {
+  margin-block-end: 40px;
+}
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.about-text {
+  font-size: var(--fs-8);
+}
+
+.about-icon {
+  min-width: max-content;
+  color: var(--dark-orange);
+  margin-block-start: 8px;
+}
+
+.about-item:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+@keyframes move {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(20px);
+  }
+}

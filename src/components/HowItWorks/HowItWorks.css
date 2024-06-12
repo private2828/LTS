@@ -1,0 +1,54 @@
+/*.section.feature {
+  padding: 20px 0; /* Add some padding to the section */
+/*}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Space between the cards */
+/*}
+
+.feature-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  height: 400px; /* Increase the height of the cards */
+/*}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+  margin-bottom: 15px;
+}
+
+.h3.card-title {
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Increase the font size of the card titles */
+/*}
+
+.card-text {
+  margin-bottom: 15px;
+  font-size: 1.2rem; /* Increase the font size of the card text */
+/*}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+}
+
+.ion-icon {
+  font-size: 1.5rem; /* Ensure the ion-icon is visible and appropriately sized */
+/*}

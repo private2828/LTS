@@ -1,0 +1,108 @@
+.services-section {
+  background-color: #f0f8ff; /* Yahan se background color ko aur light kar sakte ho */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.services-section-header {
+  margin-bottom: 40px;
+}
+
+.services-section-subtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 70px;
+  color: #000;
+}
+
+.services-section-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: blue;
+}
+
+.services-section-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.services-service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.services-service-item  {
+  flex: 0 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+
+
+.services-service-card {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 10px solid #ddd; /* Yahan se border ko aur mota kar sakte ho */
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  text-align: left;
+  position: relative;
+}
+
+.services-service-card:hover {
+  border-color: orange;
+}
+
+.services-card-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+
+
+.services-card-icon img {
+  width: 60px; /* Yahan se image ko thoda chota kar sakte ho */
+  height: auto; /* Yahan se image ki aspect ratio maintain karenge */
+}
+
+.services-card-title {
+  margin-top: 90px;
+  font-size: 24px;
+  color: #000;
+}
+
+.services-card-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}
+
+.services-btn-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  color: blue;
+}
+
+.services-btn-link IonIcon {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .services-service-item {
+    flex: 0 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-service-item {
+    flex: 0 1 100%;
+  }
+}

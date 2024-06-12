@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #F8F9FA; /* Light Grey */
+  color: #212529; /* Dark Grey */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px; /* Add padding to create space at the top and bottom */
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
+}
+
+.card {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Increased intensity of shadow */
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+}
+
+/* Left section styles */
+.left-section {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border: 2px solid #6C757D; /* Grey */
+  border-radius: 12px;
+  max-height: 600px;
+  background-color: #F8F9FA; /* Light Grey */
+  margin-right: 20px; /* Add margin to the right */
+}
+
+.offer-title {
+  margin-bottom: 10px;
+  color: #007BFF; /* Blue */
+}
+
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stack {
+  display: flex;
+  align-items: center;
+  position: relative; /* Add relative positioning */
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid #6C757D; /* Grey */
+  border-radius: 12px;
+  background-color: #fff;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.stack:hover,
+.stack:focus {
+  background-color: #E9ECEF; /* Slightly darker grey */
+  border-color: #007BFF; /* Blue */
+  outline: none; /* Remove default focus outline */
+}
+
+.stack img {
+  width: 2cm;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.top-right-container { /* Container for the top-right image and text */
+  position: absolute;
+  top: 5px; /* Distance from the top */
+  right: 10px; /* Distance from the right */
+  display: flex;
+  align-items: center;
+  background-color: #d4f1f9; /* Light blue background */
+  padding: 3px 8px; /* Added padding for better spacing */
+  border-radius: 3px;
+}
+
+.top-right-img { /* Styles for the top-right image */
+  display: none;
+}
+
+.weight-text { /* Styles for the weight text */
+  margin-left: 5px;
+  font-size: 15px;
+  color: #000; /* Black text color */
+}
+
+.stack-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px; /* Increased margin to shift text to the right */
+}
+
+.vehicle-name {
+  margin: 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.vehicle-price {
+  margin: 0;
+  font-weight: bold;
+  color: #28A745; /* Green */
+}
+
+/* Right section styles */
+.right-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Increased intensity of shadow */
+  flex: 1;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #007BFF; /* Blue */
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="date"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #6C757D; /* Grey */
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="date"]:focus,
+.form-container textarea:focus {
+  border-color: #007BFF; /* Blue */
+  outline: none;
+}
+
+.form-container button {
+  background-color: #007BFF; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-top: 1px solid #ccc;
+}

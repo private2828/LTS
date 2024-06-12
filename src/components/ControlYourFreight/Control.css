@@ -1,0 +1,77 @@
+/* Container for the entire control component */
+.control-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+    padding: 20px; /* Padding around the container */
+    background-color: #f5f5f5; /* Light grey background */
+  }
+  
+  /* Container for the main content */
+  .control-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Space out items horizontally */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for the content */
+  }
+  
+  /* Style for the control image */
+  .control-image {
+    width: 40%; /* Smaller width for the image */
+    max-width: 500px; /* Max width for the image */
+    margin-right: 20px; /* Margin to the right of the image */
+  }
+  
+  /* Container for the text content */
+  .control-text {
+    padding: 20px; /* Padding around the text */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Style for the heading */
+  .control-text h1 {
+    font-size: 2em; /* Large font size */
+    color: #1a237e; /* Dark navy blue color */
+  }
+  
+  /* Style for the paragraph */
+  .control-text p {
+    margin: 20px 0; /* Vertical margin */
+    color: #333; /* Dark grey color */
+  }
+  
+  /* Container for the features */
+  .control-features {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items horizontally */
+    margin-top: 20px; /* Margin at the top of the features section */
+  }
+  
+  /* Style for each feature */
+  .feature {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center items horizontally */
+    margin: 0 10px; /* Horizontal margin */
+  }
+  
+  /* Style for the feature icons */
+  .feature-icon {
+    width: 70px; /* Increased width for the icons */
+    height: 70px; /* Increased height for the icons */
+    margin-bottom: 10px; /* Margin at the bottom of the icons */
+    filter: invert(13%) sepia(96%) saturate(7400%) hue-rotate(235deg) brightness(83%) contrast(118%); /* Dark navy blue color */
+    background: transparent;
+    
+}
+  
+  /* Style for the feature text */
+  .feature p {
+    font-size: 1em; /* Standard font size */
+    color: #1a237e; /* Dark navy blue color */
+    text-align: center; /* Center align the text */
+  }
+  
+  /* Footer for the control component */
+  
