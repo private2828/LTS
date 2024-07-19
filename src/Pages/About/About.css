@@ -133,3 +133,54 @@
   font-size: 16px;
   color: #333;
 }
+
+/* Existing CSS code... */
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 20px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .profile-section {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .profile-text, .profile-image {
+    margin-right: 0; /* Reset margin */
+    margin-bottom: 20px; /* Add space between stacked items */
+    width: 100%; /* Full width */
+    border: 1px solid #ccc; /* Maintain border */
+    padding: 20px; /* Maintain padding */
+    border-radius: 8px; /* Maintain border radius */
+  }
+
+  .profile-image img {
+    max-width: 100%; /* Ensure image scales properly */
+  }
+
+  .mission-performance-section {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .mission, .performance {
+    margin-right: 0; /* Reset margin */
+    margin-bottom: 20px; /* Add space between stacked items */
+    width: 100%; /* Full width */
+    border: 1px solid #ccc; /* Maintain border */
+    padding: 20px; /* Maintain padding */
+    border-radius: 8px; /* Maintain border radius */
+  }
+
+  .core-values {
+    flex-direction: column; /* Stack items vertically */
+    gap: 20px; /* Adjust gap for smaller screens */
+  }
+
+  .core-value {
+    width: 100%; /* Full width */
+  }
+}
+
+/* Add additional responsive adjustments if needed */
+

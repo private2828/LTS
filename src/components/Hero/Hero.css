@@ -134,27 +134,77 @@
   height: 110px; /* Adjust size as needed */
 }
 
-@media (max-width: 767px) {
+/* HeroMobile.css */@media (max-width: 767px) {
   .hero {
-    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 20px;
+    height: 50vh; /* Reduced height for the banner */
+    position: relative;
   }
 
   .hero .container {
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    text-align: center;
+    position: relative;
   }
 
-  .hero .hero-title .span {
-    font-size: 2rem; /* Adjust size for mobile */
+  .hero .glass-container {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 
+  .hero .hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero .hero-title .span,
+  .hero .hero-title .span2,
   .hero .hero-title .direction {
-    font-size: 2rem; /* Adjust size for mobile */
+    font-size: 2rem;
+    margin: 0;
   }
 
-  .hero .hero-text {
-    font-size: 1rem; /* Adjust size for mobile */
+  .hero .hero-text,
+  .hero .btn-outline {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .hero .hero-shape {
+    position: absolute;
+    animation: shake 0.5s infinite alternate;
+  }
+
+  .hero .hero-shape.shape-1 {
+    top: 10px;
+    left: 10px;
+  }
+
+  .hero .hero-shape.shape-2 {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  @keyframes shake {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(5px, 5px); }
   }
 }

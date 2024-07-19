@@ -21,7 +21,7 @@ const Footer = () => {
           <h2 className="Footer-title">QUICK LINKS</h2> 
           <ul className="Footer-list">
             <li><NavLink to="/about" className="Footer-link">About us</NavLink></li>
-            <li><NavLink to="/services" className="Footer-link">Vehicles</NavLink></li> 
+            <li><NavLink to="/vehicles" className="Footer-link">Vehicles</NavLink></li> 
             <li><NavLink to="/faq" className="Footer-link">FAQ</NavLink></li> 
             <li><NavLink to="/driverhiring" className="Footer-link">Earn Money</NavLink></li> 
             <li><NavLink to="/contactus" className="Footer-link">Become a Business Partner</NavLink></li> 

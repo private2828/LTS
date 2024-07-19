@@ -3,7 +3,7 @@ import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-  background-color: #3a3a3a;  
+  background-color: #3a3a3a;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -12,63 +12,92 @@ export const Nav = styled.nav`
   z-index: 12;
   position: fixed;
   width: 100%;
-  top: 0;
+  top: ${({ isVisible }) => (isVisible ? '0' : '-60px')};
   transition: top 0.3s;
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 `;
 
 export const NavLogo = styled(Link)`
-  color: #ffffff; 
+  color: #ffffff;
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+  padding-left: 20px;
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+  }
 `;
 
 export const NavLink = styled(Link)`
-  color: #d3d3d3;  
-  align-items: center;
+  color: #d3d3d3;
   text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
+  padding: 1rem;
+  display: block;
   cursor: pointer;
+  text-align: center;
 
   &.active {
-    color: #ffffff;  
+    color: #ffffff;
   }
 
   &:hover {
-    color: #ffffff;   
+    color: #ffffff;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.8rem;
+    margin: 10px 0;
+    width: 100%;
   }
 `;
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: #ffffff;  
+  color: #ffffff;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
+    right: 20px;
+    transform: translateY(50%);
     font-size: 1.8rem;
     cursor: pointer;
+    z-index: 15;
   }
 `;
 
 export const NavMenu = styled.div`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  flex: 1;
-  margin-right: -24px;
+  width: auto;
+
   @media screen and (max-width: 768px) {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: ${({ isOpen }) => (isOpen ? '0' : '-50%')}; /* Show half screen */
+    width: 50%; /* Adjusted width */
+    height: 100vh;
+    background-color: #3a3a3a;
+    transition: right 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 11;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    flex-direction: column;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; /* Left-align items */
   }
 `;
 
 export const NavContact = styled.div`
   display: flex;
   align-items: center;
-  color: #ffffff;  
+  color: #ffffff;
 
   .phone-icon {
     margin-right: 5px;
@@ -92,10 +121,11 @@ export const NavBtnLink = styled(Link)`
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
-    margin-left: 24px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
 
     &:hover {
-      transition: all 0.2s ease-in-out;
       background: #fff;
       color: #808080;
     }

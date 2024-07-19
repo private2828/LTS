@@ -34,3 +34,34 @@
     color: #666;
   }
   
+  /* Existing CSS code... */
+
+@media (max-width: 768px) {
+  .driver-page {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .driver-page h1 {
+    font-size: 1.8em; /* Adjust font size for mobile */
+    margin-bottom: 20px; /* Reduce bottom margin */
+  }
+
+  .features {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+  }
+
+  .feature {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 20px; /* Add space between stacked items */
+  }
+
+  .feature h2 {
+    font-size: 1.3em; /* Adjust font size for mobile */
+    margin: 10px 0;
+  }
+
+  .feature p {
+    font-size: 0.9em; /* Adjust font size for mobile */
+  }
+}
